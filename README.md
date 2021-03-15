@@ -56,8 +56,8 @@ cmd2.pack()
 
 menu_inicial.mainloop()
 ```
-
 # AULA 08
+```
 from tkinter import *
 
 menu_inicial = Tk()
@@ -81,7 +81,7 @@ menu_inicial.geometry("%dx%d+%d+%d" % (largura, altura, posx, posy))
 menu_inicial.resizable(False, False)
 
 menu_inicial.mainloop()
-
+```
 # AULA 09
 from tkinter import *
 
