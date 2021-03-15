@@ -33,7 +33,7 @@ btn.pack()
 menu_inicial.mainloop()
 
 # AULA 07
-```
+```python
 from tkinter import *
 
 menu_inicial = Tk()
