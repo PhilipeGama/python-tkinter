@@ -33,6 +33,7 @@ btn.pack()
 menu_inicial.mainloop()
 
 # AULA 07
+´´´
 from tkinter import *
 
 menu_inicial = Tk()
@@ -54,7 +55,7 @@ cmd2 = Button(menu_inicial, text='Clicar',
 cmd2.pack()
 
 menu_inicial.mainloop()
-
+´´´
 
 # AULA 08
 from tkinter import *
