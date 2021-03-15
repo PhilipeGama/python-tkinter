@@ -3,6 +3,7 @@
 Inicio: 13/02/2021 Fim:
 https://www.youtube.com/playlist?list=PLXik_5Br-zO_m8NaaEix1pyQOsCZM7t1h
 
+```python
 from tkinter import *
 
 menu_inicial = Tk()
@@ -31,7 +32,7 @@ btn = Button(menu_inicial, text='Executar')
 btn.pack()
 
 menu_inicial.mainloop()
-
+```
 # AULA 07
 ```python
 from tkinter import *
@@ -57,7 +58,7 @@ cmd2.pack()
 menu_inicial.mainloop()
 ```
 # AULA 08
-```
+```python
 from tkinter import *
 
 menu_inicial = Tk()
@@ -102,6 +103,7 @@ label_1.pack()
 menu_inicial.mainloop()
 ```
 # AULA 10
+```python
 from tkinter import *
 
 menu_inicial = Tk()
@@ -125,10 +127,10 @@ label_2.pack()
 label_3.pack()
 
 menu_inicial.mainloop()
-
+```
 
 # AULA 11
-
+```python
 from tkinter import *
 
 menu_inicial = Tk()
@@ -143,9 +145,10 @@ label_2 = Label(menu_inicial, text='Este é o label 1.',
                 bg='red',
                 width=20)
 label_2.pack()
-
+```
 
 # AULA 12 
+```python
 from tkinter import *
 
 menu_inicial = Tk()
@@ -199,9 +202,10 @@ label_1 = Label(
 
 
 menu_inicial.mainloop()
-
+```
 
 # AULA 13
+```python
 from tkinter import *
 
 menu_inicial = Tk()
@@ -220,9 +224,9 @@ label1 = Label(
 ).pack()
 
 menu_inicial.mainloop()
-
+```
 # AULA 14
-
+```python
 from tkinter import *
 
 menu_inicial = Tk()
@@ -284,8 +288,9 @@ label1 = Label(
     justify=RIGHT
 ).pack()
 menu_inicial.mainloop()
-
+```
 # AULA 15
+```python
 from tkinter import *
 
 menu_inicial = Tk()
@@ -304,8 +309,10 @@ for item in label2.keys():
     print(item, ' : ', label2[item])
 
 menu_inicial.mainloop()
+```
 
 # AULA 16
+```python
 from tkinter import *
 
 menu_inicial = Tk()
@@ -351,8 +358,9 @@ label4.pack()
 texto.set('João Ribeiro')
 
 menu_inicial.mainloop()
-
+```
 # 017 - Python tkinter - INTRODUÇÃO AO LAYOUT EM GRID
+```python
 from tkinter import *
 
 menu_inicial = Tk()
@@ -388,8 +396,9 @@ btn2.grid(row=1, column=1)
 btn3.grid(row=1, column=2)
 
 menu_inicial.mainloop()
-
+```
 # 019 - Python tkinter - QUADRO DE LOGIN COM GRID E STICKY
+```python
 from tkinter import *
 
 root = Tk()
@@ -404,8 +413,9 @@ txt_login = Entry(root).grid(row=1, column=1)
 cmd_login = Button(text='Login').grid(row=2, column=1, sticky=E)
 
 root.mainloop()
-
+```
 # 020 - Python tkinter - COLUMNSPAN EM GRID
+```python
 from tkinter import *
 
 root = Tk()
@@ -418,8 +428,10 @@ Label(root, text='texto',  bg='blue').grid(columnspan=3, sticky='we')
 
 root.mainloop()
 
+```
 
 # 020 - Python tkinter - COLUMNSPAN EM GRID
+```python
 from tkinter import *
 
 # ---------------------------------------
@@ -467,8 +479,9 @@ b.grid()
 t1.focus()
 
 root.mainloop()
-
+```
 # 021 - Python tkinter - PEQUENO EXERCÍCIO COM WIDGETS E EVENTOS
+```python
 from tkinter import *
 
 
@@ -569,9 +582,10 @@ label4.grid()
 textbox1.focus()
 
 root.mainloop()
-
+```
 
 # 023 - Python tkinter - FAHRENHEIT PARA CELSIUS
+```python
 from tkinter import *
 # ---------------------------------------
 # funcoes
@@ -603,4 +617,5 @@ label2.grid()
 textbox1.focus()
 
 root.mainloop()
+```
 
