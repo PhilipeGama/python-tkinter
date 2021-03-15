@@ -7,7 +7,7 @@ from tkinter import *
 
 menu_inicial = Tk()
 menu_inicial.title('Primeiro app')
-
+'''
 menu_inicial.geometry('300x400+600+200')
 # menu_inicial.resizable(False, False)
 menu_inicial.resizable(0, 0)
@@ -20,7 +20,7 @@ btn.pack()
 # menu_inicial.wm_attributes('-alpha', 1)
 
 menu_inicial.mainloop()
-
+'''
 
 menu_inicial = Tk()
 menu_inicial.title('Primeiro app')
