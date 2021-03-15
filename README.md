@@ -101,7 +101,7 @@ label_1.pack()
 
 menu_inicial.mainloop()
 ```
-# AULA 10
+## AULA 10
 ```python
 from tkinter import *
 
@@ -128,7 +128,7 @@ label_3.pack()
 menu_inicial.mainloop()
 ```
 
-# AULA 11
+## AULA 11
 ```python
 from tkinter import *
 
@@ -146,7 +146,7 @@ label_2 = Label(menu_inicial, text='Este é o label 1.',
 label_2.pack()
 ```
 
-# AULA 12 
+## AULA 12 
 ```python
 from tkinter import *
 
@@ -203,7 +203,7 @@ label_1 = Label(
 menu_inicial.mainloop()
 ```
 
-# AULA 13
+## AULA 13
 ```python
 from tkinter import *
 
@@ -224,7 +224,7 @@ label1 = Label(
 
 menu_inicial.mainloop()
 ```
-# AULA 14
+## AULA 14
 ```python
 from tkinter import *
 
@@ -288,7 +288,7 @@ label1 = Label(
 ).pack()
 menu_inicial.mainloop()
 ```
-# AULA 15
+## AULA 15
 ```python
 from tkinter import *
 
@@ -310,7 +310,7 @@ for item in label2.keys():
 menu_inicial.mainloop()
 ```
 
-# AULA 16
+## AULA 16
 ```python
 from tkinter import *
 
@@ -358,7 +358,7 @@ texto.set('João Ribeiro')
 
 menu_inicial.mainloop()
 ```
-# 017 - Python tkinter - INTRODUÇÃO AO LAYOUT EM GRID
+## 017 - Python tkinter - INTRODUÇÃO AO LAYOUT EM GRID
 ```python
 from tkinter import *
 
@@ -396,7 +396,7 @@ btn3.grid(row=1, column=2)
 
 menu_inicial.mainloop()
 ```
-# 019 - Python tkinter - QUADRO DE LOGIN COM GRID E STICKY
+## 019 - Python tkinter - QUADRO DE LOGIN COM GRID E STICKY
 ```python
 from tkinter import *
 
@@ -413,7 +413,7 @@ cmd_login = Button(text='Login').grid(row=2, column=1, sticky=E)
 
 root.mainloop()
 ```
-# 020 - Python tkinter - COLUMNSPAN EM GRID
+## 020 - Python tkinter - COLUMNSPAN EM GRID
 ```python
 from tkinter import *
 
@@ -429,7 +429,7 @@ root.mainloop()
 
 ```
 
-# 020 - Python tkinter - COLUMNSPAN EM GRID
+## 020 - Python tkinter - COLUMNSPAN EM GRID
 ```python
 from tkinter import *
 
@@ -583,7 +583,7 @@ textbox1.focus()
 root.mainloop()
 ```
 
-# 023 - Python tkinter - FAHRENHEIT PARA CELSIUS
+## 023 - Python tkinter - FAHRENHEIT PARA CELSIUS
 ```python
 from tkinter import *
 # ---------------------------------------
@@ -618,3 +618,174 @@ textbox1.focus()
 root.mainloop()
 ```
 
+## 024 - Python tkinter - FOCUS E TAB ORDER
+```python
+from tkinter import *
+
+# ---------------------------------------
+# GUI
+root = Tk()
+root.title('Login')
+var_celsius = StringVar()
+# ---------------------------------------
+# funcoes
+
+
+def executar():
+    l1['text'] = t1.get()
+    l2['text'] = t2.get()
+    l3['text'] = t3.get()
+
+
+# ---------------------------------------
+# widgets
+t1 = Entry(root)
+t2 = Entry(root)
+t3 = Entry(root)
+
+l1 = Label(root)
+l2 = Label(root)
+l3 = Label(root)
+b1 = Button(root, text='Executar', command=executar)
+# ---------------------------------------
+# layout
+t1.grid()
+t2.grid()
+t3.grid()
+
+l1.grid()
+l2.grid()
+l3.grid()
+b1.grid()
+
+t1.focus()
+
+root.mainloop()
+```
+
+## 025 - Python tkinter - INTRODUÇÃO A FRAME WIDGET
+```python
+from tkinter import *
+
+# ---------------------------------------
+# GUI
+root = Tk()
+root.title('Login')
+
+# ---------------------------------------
+# widgets
+frame_login = Frame(root)
+label_usuario = Label(frame_login, text='Usuário')
+label_password = Label(frame_login, text='Password')
+text_usuario = Entry(frame_login)
+text_password = Entry(frame_login)
+cmd_entrar = Button(frame_login, text='Entrar')
+
+frame_login.grid()
+
+# ---------------------------------------
+# layout
+label_usuario.grid(row=0, column=0)
+label_password.grid(row=1, column=0)
+text_usuario.grid(row=0, column=1)
+text_password.grid(row=1, column=1)
+cmd_entrar.grid(row=2, column=1, sticky=E)
+
+
+root.mainloop()
+```
+
+
+```python
+# 026 - Python tkinter - EXERCÍCIO COM UTILIZAÇÃO DE DUAS FRAMES
+from tkinter import *
+
+# ---------------------------------------
+# GUI
+root = Tk()
+root.title('Login')
+
+# ---------------------------------------
+# funcoes
+def executar():
+    l1['text'] = t1.get()
+    l2['text'] = t2.get()
+    l3['text'] = t3.get()
+
+
+# ---------------------------------------
+# widgets
+frame_nome = Frame(root)
+frame_morada = Frame(root)
+label_nome = Label(frame_nome, text='Nome')
+label_apelido = Label(frame_nome, text='Apelido')
+label_rua = Label(frame_morada, text='Rua')
+label_cidade = Label(frame_morada, text='Cidade')
+
+text_nome = Entry(frame_nome)
+text_apelido = Entry(frame_nome)
+text_rua = Entry(frame_morada)
+text_cidade = Entry(frame_morada)
+
+cmd_salvar = Button(root, text='Salvar')
+
+
+# ---------------------------------------
+# layout
+label_nome.grid(row=0, column=0)
+label_apelido.grid(row=1, column=0)
+text_nome.grid(row=0, column=1)
+text_apelido.grid(row=1, column=1)
+
+label_rua.grid(row=0, column=0)
+label_cidade.grid(row=1, column=0)
+text_rua.grid(row=0, column=1)
+text_cidade.grid(row=1, column=1)
+
+
+frame_nome.grid(row=0, column=0)
+frame_morada.grid(row=0, column=1)
+cmd_salvar.grid()
+
+root.mainloop()
+```
+
+```python
+## 027 - Python tkinter - CRIAR O NOSSO PRÓPRIO WIDGET
+from tkinter import *
+
+
+# ---------------------------------------
+# O meu wigdet
+class FrameNome(Frame):
+    def __init__(self, meu_master):
+        super().__init__()
+        self['height'] = 150
+        self['width'] = 200
+        self['bd'] = 2
+        self['relief'] = SOLID
+
+        label_nome = Label(self, text='Nome:')
+        text_nome = Entry(self)
+        label_nome.grid(row=0, column=0)
+        text_nome.grid(row=0, column=1)
+
+
+# ---------------------------------------
+# GUI
+root = Tk()
+root.title('Login')
+
+frame_nome_1 = FrameNome(root).grid()
+frame_nome_2 = FrameNome(root).grid()
+frame_nome_3 = FrameNome(root).grid()
+frame_nome_4 = FrameNome(root).grid()
+root.mainloop()
+
+```
+```python
+
+
+
+
+```
