@@ -83,6 +83,7 @@ menu_inicial.resizable(False, False)
 menu_inicial.mainloop()
 ```
 # AULA 09
+```
 from tkinter import *
 
 menu_inicial = Tk()
@@ -99,7 +100,7 @@ label_2.pack()
 label_1.pack()
 
 menu_inicial.mainloop()
-
+```
 # AULA 10
 from tkinter import *
 
