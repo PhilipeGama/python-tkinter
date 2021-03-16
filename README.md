@@ -789,3 +789,100 @@ root.mainloop()
 
 
 ```
+# 028 - Python tkinter - SELF, INIT E SUPER
+```python
+from tkinter import *
+
+
+class MinhaFrame(Frame):
+    def __init__(self, parent):
+        super().__init__()
+        self['height'] = 200
+        self['width'] = 400
+        self['bg'] = 'blue'
+
+
+root = Tk()
+
+frame1 = MinhaFrame(root).pack()
+
+root.mainloop()
+
+
+
+
+```
+## 029 - Python tkinter - USANDO HELP PARA VER PROPRIEDADES E MÉTODOS DE UMA CLASS
+```python
+from tkinter import *
+
+
+class MinhaFrame(Frame):
+    def __init__():
+        super().__init__()
+        self['bg'] = 'red'
+
+
+print(help(MinhaFrame))
+
+
+
+```
+# 030 - Python tkinter - EXERCÍCIO PRÁTICO COM FRAME E INSTANCIAÇÃO
+```python
+
+from tkinter import *
+
+
+class MinhaFrame(Frame):
+    def __init__(self, parent):
+        super().__init__()
+
+        self['bg'] = 'red'
+        self['bd'] = '5'
+        self['relief'] = 'solid'
+        self.text1_text = StringVar()
+        self.label1_text = StringVar()
+
+        # widgets
+        self.label1 = Label(self, textvariable=self.label1_text).grid()
+        text1 = Entry(self, textvariable=self.text1_text).grid()
+        cmd1 = Button(self, text='Clique', command=self.Executar).grid()
+
+    def Executar(self):
+        self.label1_text.set('Olá, ' + self.text1_text.get() + '!')
+
+
+root = Tk()
+root.geometry('300x300')
+frame1 = MinhaFrame(root).grid()
+frame2 = MinhaFrame(root).grid()
+root.mainloop()
+
+
+
+
+```
+## 031 - Python tkinter - ADICIONAR IMAGEM A UM LAYOUT
+```python
+
+from tkinter import *
+
+root = Tk()
+img = PhotoImage(file="image-1024.png")
+label_imagem = Label(root, image=img).pack()
+
+root.mainloop()
+
+# https://pixlr.com/br/x/#editor redimesionar imagem
+
+
+
+
+```
+```python
+
+
+
+
+```
