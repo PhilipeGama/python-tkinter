@@ -1,7 +1,7 @@
 # python-tkinter
 
-Inicio: 13/02/2021 Fim:
-https://www.youtube.com/playlist?list=PLXik_5Br-zO_m8NaaEix1pyQOsCZM7t1h
+Inicio: 13/02/2021 Fim: </br>
+[Curso de Python Tkinter - João Ribeiro](https://www.youtube.com/playlist?list=PLXik_5Br-zO_m8NaaEix1pyQOsCZM7t1h)
 
 ```python
 from tkinter import *
@@ -959,9 +959,9 @@ cmd = Button(root, text='Ver valor', command=vervalor)
 root.mainloop()
 
 ```
-
-```python
 # 035 - Python tkinter - MESSAGE
+```python
+
 from tkinter import *
 
 root = Tk()
