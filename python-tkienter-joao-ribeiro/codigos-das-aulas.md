@@ -872,9 +872,9 @@ root.mainloop()
 # https://pixlr.com/br/x/#editor redimesionar imagem
 
 ```
-
+## 032 - Python tkinter - CHECKBUTTON
 ```python
-# 032 - Python tkinter - CHECKBUTTON
+
 from tkinter import *
 
 root = Tk()
@@ -896,9 +896,9 @@ check = Checkbutton(
 
 root.mainloop()
 ```
-
+## 033 - Python tkinter - LISTBOX
 ```python
-# 033 - Python tkinter - LISTBOX
+
 from tkinter import *
 
 root = Tk()
@@ -935,18 +935,195 @@ for nome in nomes:
 cmd = Button(root, text='Clique', command=executar).pack()
 root.mainloop()
 
+```
+## 034 - Python tkinter - SCALE
+```python
+
+from tkinter import *
+
+
+def vervalor(v):
+    print(v)
+
+
+root = Tk()
+root.geometry('300x300')
+slide = Scale(root,
+              from_=0,
+              to=100,
+              orient=HORIZONTAL,
+              resolution=0.5)
+slide.pack()
+
+cmd = Button(root, text='Ver valor', command=vervalor)
+root.mainloop()
 
 ```
 
-
 ```python
+# 035 - Python tkinter - MESSAGE
+from tkinter import *
+
+root = Tk()
+# root.geometry('400x300')
+
+t = Message(
+    root,
+    text='Este é o texto do message widget',
+    width=100)
+t.pack()
+
+
+root.mainloop()
 
 ```
-
+## 036 - Python tkinter - RADIOBUTTON
 ```python
 
+from tkinter import *
+
+
+def ver_radio():
+    print(val_a.get())
+
+
+def ra1():
+    print('Opção 1')
+
+
+root = Tk()
+
+frameA = Frame(root)
+frameB = Frame(root)
+
+val_a = IntVar()
+val_b = IntVar()
+
+ra_1 = Radiobutton(frameA, text='Opção A 1', variable=val_a,
+                   value=1, command=ra1)
+ra_2 = Radiobutton(frameA, text='Opçaõ A 2', variable=val_a,
+                   value=2)
+ra_3 = Radiobutton(frameA, text='Opçao A 3', variable=val_a,
+                   value=3, indicatoron=1)
+ra_1.pack()
+ra_2.pack()
+ra_3.pack()
+ra_1.select()
+
+rb_1 = Radiobutton(frameB, text='Opção B 1', variable=val_b,
+                   value=1, command=ra1)
+rb_2 = Radiobutton(frameB, text='Opçaõ B 2', variable=val_b,
+                   value=2, indicatoron=0)
+rb_3 = Radiobutton(frameB, text='Opçao B 3', variable=val_b,
+                   value=3, indicatoron=1)
+rb_1.pack()
+rb_2.pack()
+rb_3.pack()
+rb_1.select()
+
+frameA.pack()
+frameB.pack()
+
+cmd = Button(root, text='Executar', command=ver_radio).pack()
 ```
 
+## 037 - Python tkinter - SPINBOX
 ```python
 
+from tkinter import *
+
+root = Tk()
+root.geometry('300x200')
+
+s1 = Spinbox(root, from_=0, to=10)
+s1.pack()
+
+s2 = Spinbox(root, values=(10, 20, 30, 40, 50), wrap=True)
+s2.pack()
+
+s3 = Spinbox(root, values=('João', 'Ana', 'Carlos'))
+s3.pack()
+
+
+def executar():
+    print(s2.get())
+
+
+cmd = Button(root, text='Clique', command=executar)
+cmd.pack()
+
+root.mainloop()
+
+```
+## 038 - Python tkinter - ADICIONAR MENUS À APLICAÇÃO
+```python
+
+from tkinter import *
+
+
+def fileNew_click():
+    print('New')
+
+
+root = Tk()
+root.geometry('300x200')
+
+meuMenu = Menu(root)
+# meuMenu.add_command(label='File')
+
+# Menu File
+fileMenu = Menu(meuMenu, tearoff=0)
+fileMenu.add_command(label='New', command=fileNew_click)
+fileMenu.add_command(label='Open')
+fileMenu.add_command(label='Save')
+fileMenu.add_radiobutton()
+fileMenu.add_command(label='Exit')
+meuMenu.add_cascade(label='File', menu=fileMenu)
+
+# Menu Edit
+fileEdit = Menu(meuMenu, tearoff=0)
+fileEdit.add_command(label='Copy')
+fileEdit.add_command(label='Paste')
+fileEdit.add_command(label='Select All')
+meuMenu.add_cascade(label='Edit', menu=fileEdit)
+
+
+root.config(menu=meuMenu)
+
+root.mainloop()
+
+```
+# 039 - Python tkinter - TOPLEVEL
+```python
+
+from tkinter import *
+
+
+def abrir_formulario():
+    # top level
+    top = Toplevel()
+    top.title('Novo formulário')
+    top.geometry('200x100')
+    lb1 = Label(top, text='Label da nova janela')
+    lb1.pack()
+
+
+root = Tk()
+root.geometry('300x200')
+
+
+btn = Button(root, text='Novo...', command=abrir_formulario)
+btn.pack()
+
+
+root.mainloop()
+
+```
+# 041 - Python tkinter - SITES DE REFERÊNCIA
+```
+https:// www.python.org/
+https://www.python.org/
+https://tkdocs.com/tutorial/widgets.html
+https://effbot.org/
+https://www.pyinstaller.org/
 ```
