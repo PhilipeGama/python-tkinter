@@ -1,7 +1,9 @@
 # python-tkinter
 
-Inicio: 13/02/2021 Fim: </br>
-[Curso de Python Tkinter - João Ribeiro](https://www.youtube.com/playlist?list=PLXik_5Br-zO_m8NaaEix1pyQOsCZM7t1h)
+
+Inicio: 13/02/2021 Fim:16/03/2021
+[Playlist - Curso de Python Tkinter - João Ribeiro](https://www.youtube.com/playlist?list=PLXik_5Br-zO_m8NaaEix1pyQOsCZM7t1h)
+>>>>>>> ee5f2ccbb7914523c6ad604cb5e2702a21eddd3d
 
 ```python
 from tkinter import *
