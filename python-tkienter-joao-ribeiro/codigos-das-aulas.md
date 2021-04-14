@@ -961,7 +961,7 @@ cmd = Button(root, text='Ver valor', command=vervalor)
 root.mainloop()
 
 ```
-# 035 - Python tkinter - MESSAGE
+## 035 - Python tkinter - MESSAGE
 ```python
 
 from tkinter import *
@@ -1095,7 +1095,7 @@ root.config(menu=meuMenu)
 root.mainloop()
 
 ```
-# 039 - Python tkinter - TOPLEVEL
+## 039 - Python tkinter - TOPLEVEL
 ```python
 
 from tkinter import *
@@ -1121,7 +1121,7 @@ btn.pack()
 root.mainloop()
 
 ```
-# 041 - Python tkinter - SITES DE REFERÊNCIA
+## 041 - Python tkinter - SITES DE REFERÊNCIA
 ```
 https:// www.python.org/
 https://www.python.org/
